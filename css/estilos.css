@@ -67,7 +67,7 @@ header nav{
 /*Agrego Shadow a Imagen*/
 img {
 	margin: 1% 1% 1% 1%;
-	box-shadow: 2px 2px #02010a ;
+	box-shadow: 2px 2px #02010a;
 }
 
 
@@ -91,65 +91,7 @@ a.link {
 	
 }
 
-.img-central {
-	width:100%;
-	text-align: center;
-	background-color: #82c3a6;
-}
-
-.img-secundaria{
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            background-color: #d5c75f;
-            border: 1px;
-
-        }
-.img-secundaria img{
-            border: 1px solid black;
-            width: 50%;
-            margin-left: 20%;
-        }
-@media (max-width:900px){
-	  .img-secundaria{
-             display: flex;
-             flex-direction: column;
-
-            }
-       .img-secundaria img{
-                width: 70%;
-                margin-left: 10%;
-            }
-        }
-
-.paisajes{
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-        }
-.paisajes img{
-            border: 1px solid black;
-            width: 33%;
-            margin-left: 5%;
-        }
-@media (max-width:900px){
-	  .paisajes{
-             display: flex;
-             flex-direction: column;
-
-            }
-       .paisajes img{
-                width: 50%;
-                margin-left: 10%;
-            }
-        }
-
-#contenido {
-	padding: 10px;
-	color: black;
-	border-radius: 6px;
-}
-
+/*Definiciones del Footer*/
 
 
 footer {
@@ -179,5 +121,109 @@ footer h1{
 	padding-left: 5px;
 	text-align: left;
 }
+
+footer img{
+	vertical-align: middle;
+	margin: 0% 2% 0% 0%;
+	box-shadow: 0px 0px #02010a ;
+}
+
+footer br{
+	clear;
+}
+
+/* CSS parte central index.html*/
+/* Definición de Imagen Central*/
+
+.img-central {
+	width:100%;
+	text-align: center;
+	background-color: #82c3a6;
+}
+
+/* Definiciones Imágenes Secundarias*/
+
+.img-secundaria{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: #d5c75f;
+            border: 1px;
+
+        }
+.img-secundaria img{
+            border: 1px solid black;
+            /*margin-left: 20%;*/
+        }
+
+@media (max-width:900px){
+	  .img-secundaria{
+             display: flex;
+             flex-direction: column;
+
+            }
+       .img-secundaria img{
+                width: 70%;
+                margin-left: 10%;
+            }
+        }
+/* Animaciones imágenes secundarias*/
+
+#paisajes img:hover {
+		
+	transform: rotate(10deg);
+	box-shadow: 2px 2px #82c3a6;
+	transition-duration: 0.7s;
+}
+
+#retratos img:hover {
+		
+	transform: translate(5px,-10px);
+	box-shadow: 2px 2px #82c3a6;
+	transition-duration: 0.7s;
+
+}
+
+/* CSS de página paisajes.html¨*/
+
+.pag-paisajes{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding:2% 1% 2% 1%;
+            background-color: #d5c75f;
+            border: 1px;
+        }
+.pag-paisajes img{
+            border: 1px solid black;
+            width: 90%;
+            /*margin-left: 5%;*/
+        }
+
+/*Efectos Imágenes*/
+
+#blur {
+	-webkit-filter: blur(10px);
+}
+
+#escala-grises {
+	-webkit-filter: grayscale(100%);
+}
+
+#sepia {
+	-webkit-filter: sepia(90%);
+}
+
+@media (max-width:900px){
+	  .pag-paisajes{
+             display: flex;
+             flex-direction: column;
+
+            }
+       .pag-paisajes img{
+                width: 50%;
+                margin-left: 10%;
+            }
+        }
 
 
