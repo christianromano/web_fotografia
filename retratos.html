@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<title>Comenzando con la Fotografía</title>
+	<title>Comenzando con los Retratos</title>
 	<link href='https://fonts.googleapis.com/css?family=Dancing+Script' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="css/estilos.css">
 	<meta charset="utf-8">
@@ -15,48 +15,57 @@
 
 	<!-- Defino la clase contenido, que va a ser el Contenedor de la página -->
 	<div class="contenido">
-			
+
 		<header> <!-- Definiciones del encabezao de la página -->
 			<div class="titulo">
-				<h1>Comenzando con la Fotograf&iacute;a</h1>
+				<h1>Comenzando con los Retratos</h1>
 			</div>
-			
+
 			<!-- Genero el navegador con los vínculos -->
 			<div class="menu">
 				<nav>
 					<!-- El vínculo que tenga la clase "link", va a ser el que aparezca no subrayado -->
-					<a class="link" href="index.html">Inicio</a>
+					<a href="index.html">Inicio</a>
 					<a href="paisajes.html">Paisajes</a>
-					<a href="retratos.html">Retratos</a>
+					<a class="link" href="retratos.html">Retratos</a>
 				</nav>
 			</div>
 	
-		</header> <!-- Final del Encabezado -->
+		</header><!-- Final del Encabezado -->
 		
-		<!-- Definiciones de la parte de la web con la Imagen Central -->
-		<section class="img-central">
-			<div>
-				<img src="imagenes/hubble.png">
-			</div>
-		</section>
-
-		<!-- Definiciones de la parte de la web con las Imágenes Secundarias -->
- 		<section class="img-secundaria">
-        	
- 			<!-- Genero dos div, uno para cada imagen secundaria. A su vez les asigno diferentes id a cada uno, para poder generar animaciones diferentes con el hover -->
- 			<div id="paisajes">
-           		<a href="paisajes.html"><img src="imagenes/paisajes.png"></a><br>
-           		<u>Paisajes</u>
+		<!-- Definiciones de la parte media de la web. La clase "pag-anexas" va a incorporar las características que van a ser comunes tanto a retratos.html como para paisajes.html, al sufrir las mismas modificaciones, con distintas fotos -->
+ 		<section class="pag-anexas">
+        	<div>
+            	<img src="imagenes/retratos.png" id="blur">
         	</div>
         
-        	<div id="retratos">
-           		<a href="retratos.html"><img src="imagenes/retratos.png"></a><br>
-           		Retratos
+        	<div>
+            	<img src="imagenes/retratos.png" id="escala-grises">
         	</div>
-  	 	</section>
-	
+
+        	<div>
+            	<img src="imagenes/retratos.png" id="sepia">
+        	</div>
+
+ 		</section>
+
+		<section class="pag-anexas">
+        	<div>
+            	<img src="imagenes/retratos.png" id="escala-grises">
+        	</div>
+        
+        	<div>
+            	<img src="imagenes/retratos.png">
+        	</div>
+
+        	<div>
+            	<img src="imagenes/retratos.png" id="escala-grises">
+        	</div>
+ 		
+ 		</section>
+
 		<!-- Definiciones del Pie de Página. Lo divido en 4 divs, para poder ir poniendo la información. En este caso, son todas de la misma clase porque tienen el mismo comportamiento -->
-		<footer>
+ 		<footer>
 			<div class="pie">
 				<h2>Contacto</h2>
 				christian.romano@gmail.com<br>
@@ -81,6 +90,7 @@
 				<br>
 				<br>
 			</div>
+				
 		</footer> <!-- Final del Pie de Página -->
 
 	</div> <!-- Final del Contenedor -->

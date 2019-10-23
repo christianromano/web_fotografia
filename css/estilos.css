@@ -5,7 +5,7 @@ body {
 .contenido{
 	text-align: center;
 	font-family: Dancing Script;
-	
+	animation: Animacion 3s;
 }
 
 
@@ -13,25 +13,21 @@ body {
 /* Para desktop (900px o más)*/
 @media (min-width:900px){
 	  .contenido{
-             display: flex;
-             width:900px;
-             margin-right: 1%;
-             flex-direction: column;
+            display: flex;
+            width:900px;
+            flex-direction: column;
             margin-left: auto;
 			margin-right:auto;
             }
        }
 
-/* Para móvil (menos de 900px)*/
-@media (max-width:899px){
-	  .contenido{
-             display: flex;
-             flex-direction: column;
-             width:100%;
-             margin-right: 1%;
-            }
-  }
+/*Agrego Shadow a todas las imágenes*/
+img {
+	margin: 1% 1% 1% 1%;
+	box-shadow: 2px 2px #02010a;
+}
 
+/* Caracterización del Header*/
 header {
 	padding-right:1%;
 	margin-left:0%;
@@ -42,58 +38,32 @@ header {
 	border-top-left-radius: 10px;
 	display: flex;
 	align-items:center;
- 
-	justify-content:space-between;
+ 	justify-content:space-between;
 	flex-direction:row;
 	flex-wrap:wrap;
 }
 
 header .titulo{
-	
-	text-align: left ;
 	color: white;
 	text-shadow: 2px 2px #02010a;
 }
 
-header nav{
-	width: 50%;
-	text-align: right ;
-	display:flex;
-	flex-wrap:row wrap;
-	align-items:center;
-	
-}
-
-/*Agrego Shadow a Imagen*/
-img {
-	margin: 1% 1% 1% 1%;
-	box-shadow: 2px 2px #02010a;
-}
-
 
 header nav a {
-	
 	color:white;
-	text-align: center;
+	text-align: right;
 	padding:10px;
- 
-	/* Flexbox */
+ 	/* Flexbox */
 	flex-grow:1;
 }
 
 /*El link sin subrayar, va a variar el link con la clase ""link" de página en página*/
-
 a.link {
 		text-decoration: none;
 	}
 
-@media (min-width: 800px) {
-	
-}
 
 /*Definiciones del Footer*/
-
-
 footer {
 	padding-right:1%;
 	box-sizing: border-box;
@@ -110,34 +80,49 @@ footer {
 	vertical-align:top;
 }
 
-footer h1{
+/* Defino el h2 del Footer, con el que hago los títulos*/
+footer h2{
 	color: black;
 	text-align: left;
 	vertical-align:top;
 }
 
+/* Cómo se van a comportar los box de las diferentes entidades*/
 .pie {
 	vertical-align: top;
 	padding-left: 5px;
 	text-align: left;
 }
 
+/* La clase pie2 es necesario para cuando baja la resolución, 
+poder tratar distinto la parte de las imágenes de redes sociales con texto al lado*/
+.pie2 {
+	vertical-align: top;
+	padding-left: 5px;
+	text-align: left;
+}
+
+/* Código para que las imágenes de las redes sociales puedan tener texto al lado*/
 footer img{
 	vertical-align: middle;
 	margin: 0% 2% 0% 0%;
-	box-shadow: 0px 0px #02010a ;
+	box-shadow: 0px 0px #02010a ; /*Necesario para eliminar el box-shadow que tienen las imágenes por defecto*/
 }
 
 footer br{
-	clear;
+	clear; /*Limpio el alineamiento*/
 }
+/*Fin Definiciones del Footer*/
+
 
 /* CSS parte central index.html*/
 /* Definición de Imagen Central*/
 
 .img-central {
+	display: flex;
 	width:100%;
-	text-align: center;
+	justify-content: space-around;
+    align-items: center;
 	background-color: #82c3a6;
 }
 
@@ -149,6 +134,7 @@ footer br{
             align-items: center;
             background-color: #d5c75f;
             border: 1px;
+            text-decoration: underline;
 
         }
 .img-secundaria img{
@@ -156,17 +142,6 @@ footer br{
             /*margin-left: 20%;*/
         }
 
-@media (max-width:900px){
-	  .img-secundaria{
-             display: flex;
-             flex-direction: column;
-
-            }
-       .img-secundaria img{
-                width: 70%;
-                margin-left: 10%;
-            }
-        }
 /* Animaciones imágenes secundarias*/
 
 #paisajes img:hover {
@@ -186,7 +161,7 @@ footer br{
 
 /* CSS de página paisajes.html¨*/
 
-.pag-paisajes{
+.pag-anexas{
             display: flex;
             justify-content: space-around;
             align-items: center;
@@ -194,7 +169,7 @@ footer br{
             background-color: #d5c75f;
             border: 1px;
         }
-.pag-paisajes img{
+.pag-anexas img{
             border: 1px solid black;
             width: 90%;
             /*margin-left: 5%;*/
@@ -214,16 +189,80 @@ footer br{
 	-webkit-filter: sepia(90%);
 }
 
-@media (max-width:900px){
-	  .pag-paisajes{
+/*Animaciones páginas*/
+
+@-webkit-keyframes Animacion {
+	0% {
+		margin-top:150%;
+	}
+	60% {
+		margin-top:-5%;
+	}
+	100%{
+		margint-top:0%;
+	}
+}
+
+/* Para móvil (menos de 900px)*/
+@media (max-width:899px){
+	  .contenido{
+             display: flex;
+             flex-direction: column;
+             width:100%;
+             margin-right: 1%;
+                }
+
+      .titulo{
+     		width:100%;
+			vertical-align: middle;
+			text-align: center;
+      		}
+
+      .menu {
+        	width:100%;
+        	vertical-align: middle;
+        	text-align: center;
+        	}    
+ 
+
+   	  .img-secundaria{
+             display: flex;
+             flex-direction: column;
+             justify-content: space-around;
+            }
+
+      .pag-anexas{
              display: flex;
              flex-direction: column;
 
             }
-       .pag-paisajes img{
+
+      .pie {
+             
+             width:100%;
+             margin-left: 10%;
+             
+            }
+
+      .pie2 {
+      		margin-left: 10%;
+      		}
+
+	  .img-central img{
+                width: 70%;
+                margin-left: 10%;
+            }
+      .img-secundaria img{
+                width: 70%;
+                margin-left: 10%;
+            }
+
+      .pag-anexas img{
                 width: 50%;
                 margin-left: 10%;
             }
-        }
+             			
+      }
+
 
 

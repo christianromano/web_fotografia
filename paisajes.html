@@ -1,5 +1,6 @@
 <DOCTYPE!html>
 <html>
+
 <head>
 	<title>Comenzando con los Paisajes</title>
 	<link href='https://fonts.googleapis.com/css?family=Dancing+Script' rel='stylesheet' type='text/css'>
@@ -7,24 +8,31 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
+
 <body>
+	
+	<!-- Defino la clase contenido, que va a ser el Contenedor de la página -->
 	<div class="contenido">
+		
 		<header>
-			<div class="titulo">
-				<h1>Comenzando con la Fotograf&iacute;a</h1>
+			<div class="titulo"><!-- Definiciones del encabezao de la página -->
+				<h1>Comenzando con los Paisajes</h1>
 			</div>
+			
+			<!-- Genero el navegador con los vínculos -->
 			<div class="menu">
-				<nav id="menu-principal">
-					<a class="link" href="index.html">Inicio</a></li>
-					<a href="paisajes.html">Paisajes</a>
+				<!-- El vínculo que tenga la clase "link", va a ser el que aparezca no subrayado -->
+				<nav>
+					<a href="index.html">Inicio</a></li>
+					<a class="link" href="paisajes.html">Paisajes</a>
 					<a href="retratos.html">Retratos</a>
 				</nav>
 			</div>
 	
-		</header>
-
-
- 		<section class="pag-paisajes">
+		</header><!-- Final del Encabezado -->
+		
+		<!-- Definiciones de la parte media de la web. La clase "pag-anexas" va a incorporar las características que van a ser comunes tanto a retratos.html como para paisajes.html, al sufrir las mismas modificaciones, con distintas fotos -->
+ 		<section class="pag-anexas">
         	<div>
             	<img src="imagenes/paisajes.png" id="blur">
         	</div>
@@ -39,7 +47,7 @@
 
  		</section>
 
-		<section class="pag-paisajes">
+		<section class="pag-anexas">
         	<div>
             	<img src="imagenes/paisajes.png" id="escala-grises">
         	</div>
@@ -53,33 +61,35 @@
         	</div>
 
  		</section>	
+ 		
+		<!-- Definiciones del Pie de Página. Lo divido en 4 divs, para poder ir poniendo la información. En este caso, son todas de la misma clase porque tienen el mismo comportamiento -->
  		<footer>
 			<div class="pie">
-				<h1>Contacto</h1>
+				<h2>Contacto</h2>
 				christian.romano@gmail.com<br>
 				Calle 11 7583<br>
 				Tel: 4408-3031<br>
 			</div>
 			<div class="pie">
-				<h1>T&eacute;rminos</h1>
+				<h2>T&eacute;rminos</h2>
 				Ver T&eacute;rminos y Condiciones<br>
 				El autor permite la utilizaci&oacute;n<br>
 				de las im&aacute;genes indicando procedencia<br>
 			</div>
-			<div class="pie">
-				<h1>Redes Sociales</h1>
-				<img src="imagenes/twitter.png" width=10%>@Tiani76C<br>
-				<img src="imagenes/instagram.png" width=10%>christianromano<br>
-				<img src="imagenes/facebook.png" width=10%>tiani76<br>
+			<div class="pie2">
+				<h2>Redes Sociales</h2>
+				<img src="imagenes/twitter.png">@Tiani76C<br>
+				<img src="imagenes/instagram.png">christianromano<br>
+				<img src="imagenes/facebook.png">tiani76<br>
 			</div>
 			<div class="pie">
-				<h1>Contacto</h1>
+				<h2>Contacto</h2>
 				&copy Copyright 2019<br>
 				<br>
 				<br>
-			</div>
+			</div> <!-- Final del Pie de Página -->
 				
-		</footer>
+		</footer> <!-- Final del Contenedor -->
 	</div>
 </body>
 </html>
